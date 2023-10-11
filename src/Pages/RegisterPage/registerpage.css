@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Night-: #0a0a0a;
+  --AntiFlash-White-: #ededed;
+  --Office-Green-: #006400;
+  --Maroon-: #800000;
+  --Platinum-: #e0e0e0;
+  --Font-: "Roboto", sans-serif;
+  background-color: var(--Night-);
+  font-family: var(--Font-);
+  color: var(--AntiFlash-White-);
+}
+.registerPageMainContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.registerContainer {
+  height: 550px;
+  width: 400px;
+  border: 1px solid rgba(33, 33, 33);
+  border-radius: 15px;
+  box-shadow: 10px 10px 0px rgba(33, 33, 33, 1),
+    20px 20px 0px rgba(33, 33, 33, 0.7), 30px 30px 0px rgba(33, 33, 33, 0.4),
+    40px 40px 0px rgba(33, 33, 33, 0.1);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo{
+  width: 50px;
+}
+.formRegister {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.registerFooter {
+  text-align: end;
+}
+.toLoginLink {
+  color: #e0e0e0be;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.toLoginLink:hover {
+  cursor: pointer;
+  color: var(--AntiFlash-White-);
+
+}

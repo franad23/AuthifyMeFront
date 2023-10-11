@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Night-: #0a0a0a;
+  --AntiFlash-White-: #ededed;
+  --Office-Green-: #006400;
+  --Maroon-: #800000;
+  --Platinum-: #e0e0e0;
+  --Font-: "Roboto", sans-serif;
+  background-color: var(--Night-);
+  font-family: var(--Font-);
+  color: var(--AntiFlash-White-);
+}
+.buttonForm {
+  height: 40px;
+  width: 100%;
+  background-color: var(--Office-Green-);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--AntiFlash-White-);
+  border-radius: 3px;
+  border: 1px solid transparent;
+  margin-top: 10px;
+  transition: border 0.3s;
+}
+.buttonForm:hover {
+  cursor: pointer;
+  border: 1px solid var(--Platinum-);
+}
+.buttonForm:active {
+  transform: translate(3px, 3px);
+}

@@ -1,0 +1,37 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Night-: #0a0a0a;
+  --AntiFlash-White-: #ededed;
+  --Office-Green-: #006400;
+  --Maroon-: #800000;
+  --Platinum-: #e0e0e0;
+  --Font-: "Roboto", sans-serif;
+  background-color: var(--Night-);
+  font-family: var(--Font-);
+  color: var(--AntiFlash-White-);
+}
+.titleInputShared{
+  font-weight: 300;
+}
+.inputShared {
+  height: 40px;
+  width: 100%;
+  border-radius: 3px;
+  padding: 0px 10px;
+  background-color: var(--Night-);
+  border: 1px solid #e0e0e07a;
+  color: var(--AntiFlash-White-);
+  transition: border 0.3s;
+}
+.inputShared:hover{
+  border: 1px solid #e0e0e0be;
+}
+.inputSharedMainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
