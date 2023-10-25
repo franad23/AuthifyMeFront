@@ -8,6 +8,7 @@
   --AntiFlash-White-: #ededed;
   --Office-Green-: #006400;
   --Maroon-: #800000;
+  --redError-: #d40000;
   --Platinum-: #e0e0e0;
   --Font-: "Roboto", sans-serif;
   background-color: var(--Night-);
@@ -46,7 +47,7 @@
 .formRegister {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  /* gap: 20px; */
 }
 .registerFooter {
   text-align: end;

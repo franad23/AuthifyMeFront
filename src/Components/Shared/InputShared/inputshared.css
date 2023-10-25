@@ -8,6 +8,7 @@
   --AntiFlash-White-: #ededed;
   --Office-Green-: #006400;
   --Maroon-: #800000;
+  --redError-: #d40000;
   --Platinum-: #e0e0e0;
   --Font-: "Roboto", sans-serif;
   background-color: var(--Night-);
@@ -30,8 +31,25 @@
 .inputShared:hover{
   border: 1px solid #e0e0e0be;
 }
+
 .inputSharedMainContainer {
   display: flex;
   flex-direction: column;
   gap: 3px;
+}
+.errorContainer {
+  text-align: end;
+}
+
+.errorInput{
+  font-weight: 200;
+  font-size: 0.8rem;
+  display: block;
+  height: 20px;
+  color: var(--redError-);
+}
+
+.borderError {
+  border: 1px solid var(--redError-);
+  outline: 1px solid var(--redError-);
 }

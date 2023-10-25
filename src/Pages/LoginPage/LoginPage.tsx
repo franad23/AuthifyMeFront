@@ -33,7 +33,7 @@ function LoginPage() {
           />
         </form>
         <div className='registerFooter'>
-          <Link to="/login" className='toLoginLink'>¿Ya estas registrado?</Link>
+          <Link to="/login" className='toLoginLink'>¿Aun no estas registrado?</Link>
         </div>
       </div>
     </div>

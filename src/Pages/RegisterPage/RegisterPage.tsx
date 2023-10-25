@@ -1,5 +1,6 @@
 import logo from '../../assets/logo.png'
 import { Link } from "react-router-dom";
+import { Button, Tooltip } from 'antd';
 import './registerpage.css'
 
 //Components 
@@ -7,6 +8,7 @@ import InputShared from '../../Components/Shared/InputShared/InputShared';
 import { ButtonForm } from '../../Components/Shared/Buttons/Buttons';
 
 function RegisterPage() {
+
   return (
     <div className='registerPageMainContainer'>
 
