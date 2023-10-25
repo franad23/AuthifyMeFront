@@ -53,3 +53,13 @@
   border: 1px solid var(--redError-);
   outline: 1px solid var(--redError-);
 }
+
+.titleInputContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.infoLogo {
+  width: 15px;
+}

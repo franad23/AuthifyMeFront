@@ -1,6 +1,7 @@
 const validator = (type: string, valueInput: string | number | Date): boolean | { isValidated: boolean, message: string }  => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const dateRegex = /^([0-2][0-9]|3[0-1])(\/|-)(0[1-9]|1[0-2])\2(\d{4})$/;
+  const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,20}$/;
 
   switch (type) {
     case "text":
@@ -42,6 +43,14 @@ const validator = (type: string, valueInput: string | number | Date): boolean | 
       return {  
         isValidated: false,
         message: "Correo electrónico inválido."
+      };
+    case "password":
+      if (typeof valueInput === "string" && passwordRegex.test(valueInput)) {
+        return true;
+      }
+      return {  
+        isValidated: false,
+        message: "Contraseña inválida."
       };
 
     default:

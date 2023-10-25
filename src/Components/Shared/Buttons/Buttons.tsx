@@ -2,7 +2,7 @@ import './buttons.css'
 
 interface ButtonFormProps {
   buttonName: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export function ButtonForm({buttonName, onClick}: ButtonFormProps) {
