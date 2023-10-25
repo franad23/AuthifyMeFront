@@ -12,7 +12,7 @@ interface InputSharedProps {
 function InputShared({ name, onChange, placeholder, title, type }: InputSharedProps) {
   return (
     <div className='inputSharedMainContainer'>
-      <h3 className='titleInputShared'>{title}:</h3>
+      <h4 className='titleInputShared'>{title}:</h4>
       <input type={type} name={name} placeholder={placeholder} onChange={(e) => onChange(name, e.target.value)} className='inputShared'/>
     </div>
   )

@@ -23,7 +23,7 @@
   color: var(--AntiFlash-White-);
   border-radius: 3px;
   border: 1px solid transparent;
-  margin-top: 10px;
+  margin-top: 20px;
   transition: border 0.3s;
 }
 .buttonForm:hover {

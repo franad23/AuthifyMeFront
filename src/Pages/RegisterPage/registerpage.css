@@ -22,13 +22,13 @@
   flex-direction: column;
 }
 .registerContainer {
-  height: 550px;
+  /* height: 550px; */
   width: 400px;
   border: 1px solid rgba(33, 33, 33);
   border-radius: 15px;
-  box-shadow: 10px 10px 0px rgba(33, 33, 33, 1),
-    20px 20px 0px rgba(33, 33, 33, 0.7), 30px 30px 0px rgba(33, 33, 33, 0.4),
-    40px 40px 0px rgba(33, 33, 33, 0.1);
+  box-shadow: 5px 5px 0px rgba(33, 33, 33, 1),
+    10px 10px 0px rgba(33, 33, 33, 0.7), 15px 15px 0px rgba(33, 33, 33, 0.4),
+    20px 20px 0px rgba(33, 33, 33, 0.2);
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -46,7 +46,7 @@
 .formRegister {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 .registerFooter {
   text-align: end;

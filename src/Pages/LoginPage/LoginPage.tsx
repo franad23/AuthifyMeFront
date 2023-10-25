@@ -1,12 +1,12 @@
 import logo from '../../assets/logo.png'
 import { Link } from "react-router-dom";
-import './registerpage.css'
+import './loginpage.css'
 
 //Components 
 import InputShared from '../../Components/Shared/InputShared/InputShared';
 import { ButtonForm } from '../../Components/Shared/Buttons/Buttons';
 
-function RegisterPage() {
+function LoginPage() {
   return (
     <div className='registerPageMainContainer'>
 
@@ -16,12 +16,6 @@ function RegisterPage() {
           <h1>AuthifyMe</h1>
         </div>
         <form className='formRegister'>
-          <InputShared
-            name='username'
-            placeholder='Ingrese su nombre de usuario'
-            title='Nombre de usuario'
-            type='text'
-          />
           <InputShared
             name='email'
             placeholder='Ingrese su Email'
@@ -34,14 +28,8 @@ function RegisterPage() {
             title='Contraseña'
             type='password'
           />
-          <InputShared
-            name='passwordRepeat'
-            placeholder='***********'
-            title='Repetir contraseña'
-            type='password'
-          />
           <ButtonForm
-            buttonName='Registrarse'
+            buttonName='Entrar'
           />
         </form>
         <div className='registerFooter'>
@@ -52,4 +40,4 @@ function RegisterPage() {
   )
 }
 
-export default RegisterPage
+export default LoginPage
