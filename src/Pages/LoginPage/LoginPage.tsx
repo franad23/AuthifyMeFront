@@ -2,6 +2,7 @@ import logo from '../../assets/logo.png'
 import { Link } from "react-router-dom";
 import { FormEvent } from 'react';
 import { Toaster, toast } from 'sonner'
+import { useAuthStore } from '../../store/auth.store';
 import './loginpage.css'
 
 //Components 
@@ -12,6 +13,8 @@ import { ButtonForm } from '../../Components/Shared/Buttons/Buttons';
 import { loginMainUser } from '../../api/auth.api';
 
 function LoginPage() {
+  const setToken = useAuthStore(state => state.setToken);
+  const setProfile = useAuthStore(state => state.setProfile);
 
   const handleLoginMainUser = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,7 +22,8 @@ function LoginPage() {
     const password = (e.currentTarget.elements[1] as HTMLInputElement).value;
     try {
       const registerApiResponse = await loginMainUser(email, password);
-      console.log(registerApiResponse);
+      setToken(registerApiResponse.data.token);
+      setProfile(registerApiResponse.data.profile);
     } catch (error) {
       console.log(error);
       toast.error(error.response.data.message)
