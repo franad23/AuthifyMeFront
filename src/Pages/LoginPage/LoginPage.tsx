@@ -22,7 +22,7 @@ function LoginPage() {
       try {
         const apiResponse = await verifyTokenController();
         if(apiResponse.status == 200) {
-          navigate("/dasboard")
+          navigate("/dashboard")
         }
       } catch (error) {
         return

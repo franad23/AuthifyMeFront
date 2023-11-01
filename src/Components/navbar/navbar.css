@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Night-: #0a0a0a;
+  --AntiFlash-White-: #ededed;
+  --Office-Green-: #006400;
+  --Maroon-: #800000;
+  --Platinum-: #e0e0e0;
+  --Font-: "Roboto", sans-serif;
+  background-color: var(--Night-);
+  font-family: var(--Font-);
+  color: var(--AntiFlash-White-);
+}
+.navbarMainContainer{
+  height: 50px;
+  border-bottom: 1px solid #ededed79;
+}
+.logoNavbar{
+  width: 35px;
+}
+.navbarMainContainer {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  justify-content: space-between;
+}
+.logoContainerNavbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logoutIcon{
+  width: 25px;
+}
+.logoutIcon:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+.rightContainerNavbar{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
