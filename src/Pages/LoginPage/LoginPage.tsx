@@ -1,6 +1,6 @@
 import logo from '../../assets/logo.png'
 import { Link, useNavigate } from "react-router-dom";
-import { FormEvent } from 'react';
+import { FormEvent, useEffect } from 'react';
 import { Toaster, toast } from 'sonner'
 import { useAuthStore } from '../../store/auth.store';
 import './loginpage.css'
@@ -10,12 +10,26 @@ import InputShared from '../../Components/Shared/InputShared/InputShared';
 import { ButtonForm } from '../../Components/Shared/Buttons/Buttons';
 
 //API
-import { loginMainUser } from '../../api/auth.api';
+import { loginMainUser, verifyTokenController } from '../../api/auth.api';
 
 function LoginPage() {
   const setToken = useAuthStore(state => state.setToken);
   const setProfile = useAuthStore(state => state.setProfile);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const verifyTokenUser = async () => {
+      try {
+        const apiResponse = await verifyTokenController();
+        if(apiResponse.status == 200) {
+          navigate("/dasboard")
+        }
+      } catch (error) {
+        return
+      }
+    };
+    verifyTokenUser()
+  }, [])
 
   const handleLoginMainUser = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

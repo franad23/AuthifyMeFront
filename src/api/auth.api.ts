@@ -6,3 +6,7 @@ export const registerMainUser = async (username:string, email:string, password:s
 export const loginMainUser = async (email:string, password:string) => {
   return axios.post("/login" , ({email, password}))
 }
+
+export const verifyTokenController = async () => {
+  return axios.get("/")
+}
