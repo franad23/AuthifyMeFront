@@ -1,7 +1,10 @@
 import './navbar.css'
 import logo from "../../assets/logo.png"
 import logout from "../../assets/cerrar-sesion (2).png"
-import add from "../../assets/agregar.png"
+
+//Components
+import ModalAddNewProject from '../modalAddNewProject/ModalAddNewProject'
+
 
 function Navbar() {
   return (
@@ -11,7 +14,7 @@ function Navbar() {
         <h2>AuthifyMe</h2>
       </div>
       <div className='rightContainerNavbar'>
-        <img src={add} alt="addIcon" className='logoutIcon'/>
+        <ModalAddNewProject/>
         <img src={logout} alt="logoutIcon" className='logoutIcon'/>
       </div>
     </div>

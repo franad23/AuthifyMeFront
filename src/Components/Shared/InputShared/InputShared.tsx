@@ -15,10 +15,13 @@ interface InputSharedProps {
 //Valitadors
 import validator from '../../../helpers/inputValidators';
 
-function InputShared({ name, onChangeInput, placeholder, title, type }: InputSharedProps) {
+function InputShared({ name, onChangeInput, placeholder, title, type, value }: InputSharedProps) {
   const [inputError, setInputError] = useState<{ isValidated: boolean, message: string } | null>(null);
+  const [inputValue, setInputValue] = useState(value ? value : "");
   const textTooltip = "La contraseña debe tener al menos 8 caracteres, al menos una letra mayuscula y un numero"
+
   const handleOnChangeInput = (e: FormEvent<HTMLInputElement>) => {
+    setInputValue(e.currentTarget.value)
     const isValidatedValue = validator(type, e.currentTarget.value);
   
     if (typeof isValidatedValue === "boolean" && isValidatedValue === true) {
@@ -53,6 +56,7 @@ function InputShared({ name, onChangeInput, placeholder, title, type }: InputSha
         placeholder={placeholder} 
         onChange={handleOnChangeInput}  
         className={inputError?.isValidated === false ? 'inputShared borderError' : 'inputShared'}
+        value={inputValue}
       />
       <div className='errorContainer'>
         {/* <span className='errorInput'>Hola</span> */}

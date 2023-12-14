@@ -33,3 +33,32 @@
 .buttonForm:active {
   transform: translate(3px, 3px);
 }
+
+.buttonConfirm {
+  font-family: var(--Font-);
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: var(--Office-Green-);
+  color: var(--Platinum-);
+  border: 2px solid transparent;
+}
+.buttonConfirm:hover { 
+  cursor: pointer;
+  border: 2px solid var(--Night-);
+  
+}
+
+.buttonCancel {
+  font-family: var(--Font-);
+  padding: 10px 15px;
+  border-radius: 3px;
+  background-color: var(--Maroon-);
+  color: var(--Platinum-);
+  border: 2px solid transparent;
+}
+
+.buttonCancel:hover { 
+  cursor: pointer;
+  border: 2px solid var(--Night-);
+  
+}

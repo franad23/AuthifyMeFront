@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Night-: #0a0a0a;
+  --AntiFlash-White-: #ededed;
+  --Office-Green-: #006400;
+  --Maroon-: #800000;
+  --Platinum-: #e0e0e0;
+  --Font-: "Roboto", sans-serif;
+  background-color: var(--Night-);
+  font-family: var(--Font-);
+  color: var(--AntiFlash-White-);
+}
+
+.ant-modal-header {
+  background-color: var(--AntiFlash-White-) !important;
+}
+
+.ant-modal-title {
+  font-family: var(--Font-) !important;
+  
+}
+
+.ant-modal-content {
+  background-color: var(--AntiFlash-White-) !important;
+  box-shadow: 5px 5px 0px rgba(255, 255, 255, 0.5),
+    10px 10px 0px rgba(255, 255, 255, 0.3), 15px 15px 0px rgba(255, 255, 255, 0.2),
+    20px 20px 0px rgba(255, 255, 255, 0.1) !important;
+}
+
+.ant-modal-body {
+  font-family: var(--Font-) !important;
+}
+
+.buttonFooterModalAddProject {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
